@@ -1,7 +1,7 @@
 #include "stdio.h"
 #include "string.h"
 
-void printAsBinary(int);
+void printAsBinary(char);
 char *byteToBinaryString(char);
 
 int main()
@@ -20,6 +20,14 @@ int main()
     
     int c = 63;
     printf("%s\n", byteToBinaryString(c));
+    
+    printf("---------\n");
+    char d = 0b10000000;
+    printAsBinary(d);
+    printf("%d\n", d);
+    d = d >> 1;
+    printAsBinary(d);
+    printf("%d\n", d);
     return 0;
 }
 
@@ -36,7 +44,7 @@ char *byteToBinaryString(char n)
     return b;
 }
 
-void printAsBinary(int n)
+void printAsBinary(char n)
 {
     char b[9];
     b[0] = '\0';
