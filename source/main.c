@@ -2,6 +2,7 @@
 #include "string.h"
 
 void printAsBinary(int);
+char *byteToBinaryString(char);
 
 int main()
 {
@@ -14,13 +15,25 @@ int main()
     int b = 0b1111;
     printf("%d\n", b); // Binary values start with 0b
     
-    int a = 100;
-    for (int i = 0; i < 10; i++)
-    {
-        printf("%u\n", a);
-        a = a >> 1;
-    }
+    int a = 128;
+    printAsBinary(a);
+    
+    int c = 63;
+    printf("%s\n", byteToBinaryString(c));
     return 0;
+}
+
+char *byteToBinaryString(char n)
+{
+    static char b[9];
+    b[0] = '\0';
+    
+    for (int z = 128; z > 0; z >>= 1)
+    {
+        strcat(b, ((n & z ) == z) ? "1" : "0");
+    }
+    
+    return b;
 }
 
 void printAsBinary(int n)
