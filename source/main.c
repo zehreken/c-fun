@@ -3,6 +3,8 @@
 
 void printAsBinary(char);
 char *byteToBinaryString(char);
+void mask(char, char);
+void flip(char, char);
 
 int main()
 {
@@ -28,6 +30,9 @@ int main()
     d = d >> 1;
     printAsBinary(d);
     printf("%d\n", d);
+    
+    mask(0b00001111, 0b00001100);
+    flip(0b00001111, 0b11111111); // to flip bits, we use a number which is all 1
     return 0;
 }
 
@@ -55,4 +60,14 @@ void printAsBinary(char n)
     }
     
     printf("%s\n", b);
+}
+
+void mask(char a, char mask)
+{
+    printAsBinary(a & mask);
+}
+
+void flip(char a, char b)
+{
+    printAsBinary(a ^ b);
 }
