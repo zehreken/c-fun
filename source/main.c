@@ -5,6 +5,7 @@ void printAsBinary(char);
 char *byteToBinaryString(char);
 void mask(char, char);
 void flip(char, char);
+void combineSelection(char, char);
 
 int main()
 {
@@ -33,6 +34,8 @@ int main()
     
     mask(0b00001111, 0b00001100);
     flip(0b00001111, 0b11111111); // to flip bits, we use a number which is all 1
+    combineSelection(0b00001111, 0b11100000);
+    
     return 0;
 }
 
@@ -70,4 +73,9 @@ void mask(char a, char mask)
 void flip(char a, char b)
 {
     printAsBinary(a ^ b);
+}
+
+void combineSelection(char a, char b)
+{
+    printAsBinary(a | b);
 }
