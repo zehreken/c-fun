@@ -12,7 +12,7 @@ void printAsBinary(char n)
         strcat(b, ((n & z) == z) ? "1" : "0");
     }
     
-    printf("%s\n", b);
+    printf("char: %d -> binary: %s\n", n, b);
 }
 
 char *byteToBinaryString(char n)
@@ -28,9 +28,10 @@ char *byteToBinaryString(char n)
     return b;
 }
 
-void mask(char a, char mask)
+char mask(char a, char mask)
 {
-    printAsBinary(a & mask);
+//    printAsBinary(a & mask);
+    return a & mask;
 }
 
 void flip(char a, char b)

@@ -3,7 +3,7 @@
 
 void printAsBinary(char);
 char *byteToBinaryString(char);
-void mask(char, char);
+char mask(char, char);
 void flip(char, char);
 void combineSelection(char, char);
 
