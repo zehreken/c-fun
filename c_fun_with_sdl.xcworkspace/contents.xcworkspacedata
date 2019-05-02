@@ -5,6 +5,12 @@
       location = "container:source/main.c">
    </FileRef>
    <FileRef
+      location = "group:source/bitwiseUtils.h">
+   </FileRef>
+   <FileRef
+      location = "group:source/bitwiseUtils.c">
+   </FileRef>
+   <FileRef
       location = "group:source/Makefile">
    </FileRef>
 </Workspace>
