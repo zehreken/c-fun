@@ -2,12 +2,16 @@
 #include <string.h>
 #include <stdbool.h>
 #include "bitwiseUtils.h"
+#include "pointerFun.h"
 
 bool startSDL();
 void quitSDL();
 
 int main()
 {
+    pointerFun_init();
+    
+    return 0;
     int n = 016; // Octal(base 8) values start with 0
     printAsBinary(n);
     
@@ -21,7 +25,7 @@ int main()
     printAsBinary(a);
     
     int c = 255;
-    printf("int: 255 -> %s\n", byteToBinaryString(c));
+    printf("int: 255 -> binary: %s\n", convertToBinaryString(c));
     
     printf("---------\n");
     char d = 0b10000000;
@@ -32,8 +36,15 @@ int main()
     printf("d >> 1 -> %d\n", d);
     
     printAsBinary(mask(0b00001111, 0b00001100));
-    flip(0b00001111, 0b11111111); // to flip bits, we use a number which is all 1
-    combineSelection(0b00001111, 0b11100000);
+    printAsBinary(flip(0b00001111, 0b11111111)); // to flip bits, we use a number which is all 1
+    char c1 = 0b00000111;
+    char c2 = 0b11100000;
+    char* as = convertToBinaryString(c1);
+    char* ab = convertToBinaryString(c2);
+    char* ac = "test";
+    char* ad = ac;
+    printf("%s %s %s\n", as, ab, ac);
+    printf("%d %d\n", ac, ad);
     
     return 0;
 }

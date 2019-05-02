@@ -15,7 +15,7 @@ void printAsBinary(char n)
     printf("char: %d -> binary: %s\n", n, b);
 }
 
-char *byteToBinaryString(char n)
+char *convertToBinaryString(char n)
 {
     static char b[9];
     b[0] = '\0';
@@ -30,16 +30,15 @@ char *byteToBinaryString(char n)
 
 char mask(char a, char mask)
 {
-//    printAsBinary(a & mask);
     return a & mask;
 }
 
-void flip(char a, char b)
+char flip(char a, char b)
 {
-    printAsBinary(a ^ b);
+    return a ^ b;
 }
 
-void combineSelection(char a, char b)
+char combineSelection(char a, char b)
 {
-    printAsBinary(a | b);
+    return a | b;
 }

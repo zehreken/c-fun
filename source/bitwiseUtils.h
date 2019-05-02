@@ -2,9 +2,9 @@
 #define bitwiseUtils_h
 
 void printAsBinary(char);
-char *byteToBinaryString(char);
+char *convertToBinaryString(char);
 char mask(char, char);
-void flip(char, char);
-void combineSelection(char, char);
+char flip(char, char);
+char combineSelection(char, char);
 
 #endif
