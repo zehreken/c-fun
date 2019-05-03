@@ -11,6 +11,12 @@
       location = "group:source/bitwiseUtils.c">
    </FileRef>
    <FileRef
+      location = "group:source/bitwiseFun.h">
+   </FileRef>
+   <FileRef
+      location = "group:source/bitwiseFun.c">
+   </FileRef>
+   <FileRef
       location = "group:source/pointerFun.h">
    </FileRef>
    <FileRef

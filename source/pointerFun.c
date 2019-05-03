@@ -13,13 +13,6 @@ void pointerFun_init()
     int f = newStaticInt();
     printf("address of f: %p\n", &f);
     
-    for (int i = 0; i < 10; i++)
-    {
-        int l = i;
-        malloc(10);
-        printf("address of l: %p\n", &l);
-    }
-    
     int g = newInt();
     printf("address of g: %p\n", &g);
     
