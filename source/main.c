@@ -9,9 +9,6 @@ void quitSDL();
 
 int main()
 {
-    pointerFun_init();
-    
-    return 0;
     int n = 016; // Octal(base 8) values start with 0
     printAsBinary(n);
     
@@ -39,12 +36,13 @@ int main()
     printAsBinary(flip(0b00001111, 0b11111111)); // to flip bits, we use a number which is all 1
     char c1 = 0b00000111;
     char c2 = 0b11100000;
-    char* as = convertToBinaryString(c1);
-    char* ab = convertToBinaryString(c2);
-    char* ac = "test";
-    char* ad = ac;
+    char as[9], ab[9], ac[9];
+    getBinaryString(as, c1);
+    getBinaryString(ab, c2);
+    getBinaryString(ac, combineSelection(c1, c2));
+    
     printf("%s %s %s\n", as, ab, ac);
-    printf("%d %d\n", ac, ad);
+    printf("%p\n", ac);
     
     return 0;
 }

@@ -51,7 +51,7 @@ int newInt()
     int a = 100;
     printf("address of new: %p\n", &a);
     
-    return a;
+    return a++;
 }
 
 int newStaticInt()
@@ -59,5 +59,5 @@ int newStaticInt()
     static int a = 200;
     printf("address of new static: %p\n", &a);
     
-    return a;
+    return a++;
 }

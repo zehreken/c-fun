@@ -15,6 +15,16 @@ void printAsBinary(char n)
     printf("char: %d -> binary: %s\n", n, b);
 }
 
+void getBinaryString(char *buffer, char n)
+{
+    buffer[0] = '\0';
+    
+    for (int z = 128; z > 0; z >>= 1)
+    {
+        strcat(buffer, ((n & z) == z) ? "1" : "0");
+    }
+}
+
 char *convertToBinaryString(char n)
 {
     static char b[9];
