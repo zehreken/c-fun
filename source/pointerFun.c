@@ -8,17 +8,17 @@ int newStaticInt();
 void pointerFun_init()
 {
     int d = newInt();
-    printf("address of d: %p\n", &d);
-    
+    printf("address of   d: %p\n", &d);
+
     int f = newStaticInt();
-    printf("address of f: %p\n", &f);
-    
+    printf("address of   f: %p\n", &f);
+
     int g = newInt();
-    printf("address of g: %p\n", &g);
-    
+    printf("address of   g: %p\n", &g);
+
     int h = newStaticInt();
-    printf("address of h: %p\n", &h);
-    
+    printf("address of   h: %p\n", &h);
+
     return;
     int a = 100;
     printf("a: %d\n", a);
@@ -27,11 +27,11 @@ void pointerFun_init()
     *p_a = 20;
     printf("a: %d\n", a);
     printf("value of p_a: %d\n", *p_a);
-    
+
     int b = 200;
     p_a = &b;
     printf("address of b: %p\n", p_a);
-    
+
     printf("\n\nstatic----------\n");
     static int c = 100;
     int *p_c = &c;
@@ -43,7 +43,7 @@ int newInt()
 {
     int a = 100;
     printf("address of new: %p\n", &a);
-    
+
     return a++;
 }
 
@@ -51,6 +51,6 @@ int newStaticInt()
 {
     static int a = 200;
     printf("address of new static: %p\n", &a);
-    
+
     return a++;
 }
