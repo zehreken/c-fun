@@ -3,6 +3,7 @@
 #include <stdbool.h>
 #include "bitwiseFun.h"
 #include "pointerFun.h"
+#include "float_fun.h"
 
 int main()
 {
@@ -10,6 +11,8 @@ int main()
     pointerFun_init();
 
     bitwiseFun_init();
+
+    floatFunInit();
 
     return 0;
 }
