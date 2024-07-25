@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "pointer_fun.h"
-#include "utils.h"
+#include "time_utils.h"
 
 void pointerFunInit()
 {

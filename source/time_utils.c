@@ -1,4 +1,4 @@
-#include "utils.h"
+#include "time_utils.h"
 #include <stdio.h>
 
 void timer_start(Timer *timer)
