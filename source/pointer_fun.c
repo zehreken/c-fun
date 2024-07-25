@@ -1,11 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "pointerFun.h"
+#include "pointer_fun.h"
 
-int newInt();
-int newStaticInt();
-
-void pointerFun_init()
+void pointerFunInit()
 {
     int d = newInt();
     printf("address of   d: %p\n", &d);
@@ -18,6 +15,9 @@ void pointerFun_init()
 
     int h = newStaticInt();
     printf("address of   h: %p\n", &h);
+
+    int *j = newStaticIntP();
+    printf("address of j: %p j: %i\n", j, *j);
 
     return;
     int a = 100;
@@ -53,4 +53,13 @@ int newStaticInt()
     printf("address of new static: %p\n", &a);
 
     return a++;
+}
+
+int *newStaticIntP()
+{
+    // This memory address lives as long as the program itself
+    static int a = 300;
+    printf("address of new static(p): %p\n", &a);
+
+    return &a;
 }

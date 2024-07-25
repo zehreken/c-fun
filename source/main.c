@@ -1,17 +1,19 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdbool.h>
-#include "bitwiseFun.h"
-#include "pointerFun.h"
+#include "bitwise_fun.h"
+#include "pointer_fun.h"
 #include "float_fun.h"
 
 int main()
 {
-    // bitwiseFun_init();
-    pointerFun_init();
+    printf("pointer fun ================\n");
+    pointerFunInit();
 
-    bitwiseFun_init();
+    printf("bitwise fun ================\n");
+    bitwiseFunInit();
 
+    printf("float fun ==================\n");
     floatFunInit();
 
     return 0;

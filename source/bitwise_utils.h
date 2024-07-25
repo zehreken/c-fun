@@ -1,5 +1,5 @@
-#ifndef bitwiseUtils_h
-#define bitwiseUtils_h
+#ifndef bitwise_utils_h
+#define bitwise_utils_h
 
 void printAsBinary(char);
 void getBinaryString(char *buffer, char n);
