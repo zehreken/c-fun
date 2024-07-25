@@ -1,9 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "pointer_fun.h"
+#include "utils.h"
 
 void pointerFunInit()
 {
+    Timer timer;
+    timer_start(&timer);
+
     int d = newInt();
     printf("address of   d: %p\n", &d);
 
@@ -18,6 +22,19 @@ void pointerFunInit()
 
     int *j = newStaticIntP();
     printf("address of j: %p j: %i\n", j, *j);
+
+    for (int i = 0; i < 100000; i++)
+    {
+        for (int j = 0; j < 10000; j++)
+        {
+            double a = i * i * i * i * i * i;
+        }
+    }
+
+    timer_stop(&timer);
+    double elapsed = timer_elapesed(&timer);
+
+    printf("elapsed: %f\n", elapsed);
 
     return;
     int a = 100;

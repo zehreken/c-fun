@@ -1,5 +1,5 @@
-#ifndef float_fun_h
-#define float_fun_h
+#ifndef FLOAT_FUN_H
+#define FLOAT_FUN_H
 
 void floatFunInit();
 

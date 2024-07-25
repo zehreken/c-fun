@@ -1,8 +1,17 @@
 #include "utils.h"
+#include <stdio.h>
 
-// clock_t begin = clock();
+void timer_start(Timer *timer)
+{
+    timer->start = clock();
+}
 
-// /* here, do your time-consuming job */
+void timer_stop(Timer *timer)
+{
+    timer->end = clock();
+}
 
-// clock_t end = clock();
-// double time_spent = (double)(end - begin) / CLOCKS_PER_SEC;
+double timer_elapesed(Timer *timer)
+{
+    return (double)(timer->end - timer->start) / CLOCKS_PER_SEC;
+}

@@ -1,5 +1,5 @@
-#ifndef pointer_fun_h
-#define pointer_fun_h
+#ifndef POINTER_FUN_H
+#define POINTER_FUN_H
 
 void pointerFunInit();
 int newInt();

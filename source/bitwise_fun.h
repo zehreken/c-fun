@@ -1,5 +1,5 @@
-#ifndef bitwise_fun_h
-#define bitwise_fun_h
+#ifndef BITWISE_FUN_H
+#define BITWISE_FUN_H
 
 void bitwiseFunInit();
 
