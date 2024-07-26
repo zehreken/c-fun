@@ -5,6 +5,7 @@
 
 void pointerFunInit()
 {
+#pragma region timer
     Timer timer;
     timer_start(&timer);
 
@@ -23,18 +24,10 @@ void pointerFunInit()
     int *j = newStaticIntP();
     printf("address of j: %p j: %i\n", j, *j);
 
-    for (int i = 0; i < 100000; i++)
-    {
-        for (int j = 0; j < 10000; j++)
-        {
-            double a = i * i * i * i * i * i;
-        }
-    }
-
     timer_stop(&timer);
     double elapsed = timer_elapesed(&timer);
-
-    printf("elapsed: %f\n", elapsed);
+    printf("region timer elapsed: %f\n", elapsed);
+#pragma endregion test
 
     return;
     int a = 100;
