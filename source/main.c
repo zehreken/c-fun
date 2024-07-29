@@ -4,6 +4,7 @@
 #include "bitwise_fun.h"
 #include "pointer_fun.h"
 #include "float_fun.h"
+#include "array_fun.h"
 
 int main()
 {
@@ -15,6 +16,9 @@ int main()
 
     printf("float fun ==================\n");
     floatFunInit();
+
+    printf("array fun ==================\n");
+    arrayFunInit();
 
     return 0;
 }
