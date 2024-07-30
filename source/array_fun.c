@@ -9,4 +9,10 @@ void arrayFunInit()
     {
         printf("i: %d m: %d\n", i, numbers[i]);
     }
+
+    int sizeNumbers = sizeof(numbers);
+    int sizeInt = sizeof(int);
+    int count = sizeNumbers / sizeInt;
+
+    printf("s_n: %d s_i: %d c: %d\n", sizeNumbers, sizeInt, count);
 }
