@@ -18,7 +18,7 @@ int main()
 
     SetTargetFPS(60); // Set our game to run at 60 frames-per-second
     //--------------------------------------------------------------------------------------
-
+    int d = 0;
     // Main game loop
     while (!WindowShouldClose()) // Detect window close button or ESC key
     {
@@ -26,6 +26,10 @@ int main()
         //----------------------------------------------------------------------------------
         // TODO: Update your variables here
         //----------------------------------------------------------------------------------
+        char text[20];
+        sprintf(text, "test: %d", d++);
+
+        DrawRectangle(100, 100, 50, 50, BLUE);
 
         // Draw
         //----------------------------------------------------------------------------------
@@ -33,6 +37,7 @@ int main()
 
         ClearBackground(RAYWHITE);
 
+        DrawText(text, 190, 100, 20, GREEN);
         DrawText("Congrats! You created your first window!", 190, 200, 20, LIGHTGRAY);
 
         EndDrawing();
